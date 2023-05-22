@@ -7,12 +7,17 @@ function ModelModel(appKey) {
     
     const state = {
         modelKey: "",
+        model: {},
         userKey: getUserKey(appKey),
     }
 
     return {
-        setModelKey: function(modelKey){
-            state.modelKey = modelKey;
+        setModel: function(modelName){
+            console.log("get/set ModelKey for "+modelName)
+            state.model = {
+                name: modelName,
+            }
+            state.modelKey = "key-for-"+modelName;
         },
         query: function(query) {
             if (state.modelKey === ""){
