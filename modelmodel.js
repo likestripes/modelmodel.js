@@ -22,7 +22,7 @@ function ModelModel(appKey) {
         query: function(query) {
             if (state.modelKey === ""){
                 console.log("no modelKey set, using `default`")
-                this.setModelKey("default");
+                this.setModel("default");
             }
             return "querying with "+state.modelKey+": "+query;
         }
